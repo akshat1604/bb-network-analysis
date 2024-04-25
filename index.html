@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Xtra Blog</title>
+	<title>Breaking Bad : A Network Analysis</title>
 	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,17 +35,11 @@ https://templatemo.com/tm-553-xtra-blog
               
             <div class="row tm-row">
                 
-               <h1>Introduction:</h1>
+               <h1 style="color: #026635;">Introduction:</h1>
                   <p>
-                     Welcome to the world of Breaking Bad, where chemistry meets chaos and characters collide in a riveting tale of transformation and consequence. In this project, we embark on a journey deep into the heart of one of television's most iconic series, uncovering the hidden layers of intrigue and complexity that lie beneath the surface.
-
-Through meticulous data collection, contextual exploration, and rigorous analysis, we delve into the intricate web of character relationships and community dynamics within Breaking Bad. From the humble beginnings of Walter White to the climactic crescendo of the final season, our endeavor is to unravel the mysteries of this captivating narrative and shed new light on its timeless allure.
-
-Join us as we navigate the twists and turns of Walter White's descent into the criminal underworld, uncovering the secrets that lurk within the Breaking Bad universe. Through the lens of network analysis and computational methodologies, we embark on a quest to decipher the underlying structures that govern the series' narrative landscape, offering fresh insights into the enduring legacy of this television masterpiece.
-
-So buckle up, fellow enthusiasts, as we venture into the world of Breaking Bad—a world where every character, every community, and every choice carries weight and significance. Together, let's explore the depths of Walter White's empire and discover what lies beyond the surface of this groundbreaking series.
+                     Welcome to the world of Breaking Bad, where chemistry meets disaster and characters clash in an engrossing story of transformation and consequence. With this project, I go deeply into the core of one of the most recognizable television shows ever created, revealing layers upon layers of nuance and complexity beneath the surface. I examine the complex web of character interactions and community dynamics in Breaking Bad through meticulous gathering of data, contextual study, and rigorous analysis. My goal is to solve the riddles of this engrossing story and reveal fresh insights into its enduring appeal, starting with Walter White's modest beginnings and ending with the dramatic culmination of the final season. I set out on an adventure to discover the underlying structures that determine the narrative landscape of the series via the lens of network analysis and computational approaches, providing new perspectives on the lasting impression of this television masterpiece. So grab a seat, fellow fans, and join me as we explore the universe of Breaking Bad, where each person, group, and decision has purpose and weight. Let's investigate Walter White's empire's depths together and learn more about this ground-breaking series' secrets.
                   </p>
-                  <h1>Context:</h1>
+                  <h1 style="color: #026635;">Context:</h1>
                   <p>Understanding the context of my project is essential to grasp its significance and objectives. At its core, my project revolves around unraveling the intricate web of character relationships and community dynamics within the realm of Breaking Bad.
 
                      Breaking Bad, a groundbreaking television series created by Vince Gilligan, has captured the hearts and minds of audiences worldwide with its compelling narrative and complex characters. At the forefront of this captivating saga is Walter White, a high school chemistry teacher turned methamphetamine manufacturer, whose transformation into the enigmatic figure of Heisenberg serves as the linchpin of the series' narrative arc.
@@ -58,35 +52,29 @@ So buckle up, fellow enthusiasts, as we venture into the world of Breaking Bad�
                      In essence, my project represents an exploration into the heart of Breaking Bad—a quest to unravel the mysteries of character dynamics and community formations that lie at the core of this iconic television series. Through a meticulous analysis grounded in real data, I seek to uncover the hidden depths of Walter White's world and offer new insights into the timeless allure of Breaking Bad.
                      
                      </p>
-                     <h1>Dataset:</h1>
+                     <h1 style="color: #026635;">Dataset:</h1>
                      <p>
-                        To kickstart my research, I needed data—specifically, information about Breaking Bad that I could analyze. However, there wasn't an existing dataset available for my needs. So, I rolled up my sleeves and turned to web scraping to get what I needed directly from the Breaking Bad fandom website.
-
-Scraping data isn't as glamorous as it sounds. It's more like digital digging. Using Python and BeautifulSoup, I dug into the website, extracting details about characters, episode summaries, and season synopses. The Breaking Bad website held a goldmine of information, but navigating through its pages to collect everything I needed was no easy task.
-
-One of the challenges I encountered was dealing with the final season, which was split into two parts. I made sure to scrape data from both halves to capture the full picture of the series' conclusion.
-
-After some HTML parsing and web crawling, I managed to gather a neat dataset containing all the crucial details I needed for my analysis. It wasn't glamorous work, but it was necessary to lay the groundwork for my research.
-
-In a nutshell, my dataset may not have come from a fancy source, but it's packed with the information I need to delve into the world of Breaking Bad and uncover its hidden depths.
+                        I wanted data, namely information about Breaking Bad that I could evaluate, to get my analysis off to a good start. Unfortunately, I couldn't find an existing dataset that suited my requirements. I decided to utilize web scraping to obtain the necessary information straight from the Breaking Bad fandom website. I crawled through the website, extracting characters from all the episodes, and season summaries using BeautifulSoup. Although the Breaking Bad website was a treasure trove of information, it was difficult for me to find what I needed by browsing through its pages. 
+                        One of the challenges I encountered was dealing with the final season, which was split into two parts. I made sure to scrape data from both halves to capture the full picture of the series' conclusion. After some HTML parsing and web crawling, I managed to gather a neat dataset containing all the crucial details I needed for my analysis, namely all the character names and the season summaries. In a nutshell, my dataset may not have come from a fancy source, but it's packed with the information I need to delve into the world of Breaking Bad.
 
                      </p>
-                     <h1>Techniques and Terminologies used:</h1>
+                     <h1 style="color: #026635;">Techniques and Terminologies:</h1>
                      <p>
-                        In delving into the realm of network analysis, I've employed a range of techniques and concepts that may seem daunting at first glance. However, by breaking down these terms into simpler explanations, even those unfamiliar with computer science can grasp their significance:
-
-Named Entity Recognition (NER): Named Entity Recognition is a technique used to identify and classify entities within text data. In the context of Breaking Bad, NER helps us extract specific information such as character names, locations, and organizations mentioned in episode summaries or character descriptions. <br>
-Centrality Measures: <br>
-Network Centrality: Network centrality refers to the importance of a node (or character in our case) within a network. It quantifies how central or influential a character is in the overall structure of the Breaking Bad universe.<br>
-Degree Centrality: Degree centrality measures how well-connected a character is by counting the number of connections (or edges) they have with other characters. A character with high degree centrality is highly connected and may play a significant role in the narrative.<br>
-Betweenness Centrality: Betweenness centrality identifies characters that act as bridges or intermediaries between other characters in the network. These characters often control the flow of information or influence within the Breaking Bad universe.<br>
-Closeness Centrality: Closeness centrality measures how quickly a character can reach all other characters in the network. Characters with high closeness centrality are central to the network's communication and interaction dynamics.<br>
-Eigen Centrality: Eigen centrality evaluates a character's importance based on their connections to other important characters. It takes into account not only a character's direct connections but also the connections of their connections.<br>
-PageRank: PageRank, originally developed by Google, assesses the importance of a character based on the quality and quantity of their connections. Characters with high PageRank are considered influential within the network.<br>
-These terminologies serve as essential tools in our analysis, enabling us to quantify and understand the roles and relationships of characters within the Breaking Bad universe. Through their application, we gain valuable insights into the dynamics that drive the narrative and shape the interconnected web of characters in the series.
+                        When working on network analysis, I've employed a range of techniques and concepts that may seem daunting at first glance. However, by breaking down these terms into simpler explanations, even those unfamiliar with computer science can grasp their significance:
+<br>
+<span style="font-size: 25px; color: #026635;"><b>Named Entity Recognition (NER):</b></span> <br> Named Entity Recognition is a technique used to identify and classify entities within text data. In the context of Breaking Bad, NER helps us extract specific information such as character names, locations, and organizations mentioned in episode summaries or character descriptions. <br>
+<span style="font-size: 25px; color: #026635;"><b>Centrality Measures:</b></span> <br>
+<span style="font-size: 20px; color: #026635;"><b>Network Centrality:</b></span> Network centrality refers to the importance of a node (or character in our case) within a network. It quantifies how central or influential a character is in the overall structure of the Breaking Bad universe.<br>
+<span style="font-size: 20px; color: #026635;"><b>Degree Centrality:</b></span>  Degree centrality measures how well-connected a character is by counting the number of connections (or edges) they have with other characters. A character with high degree centrality is highly connected and may play a significant role in the narrative.<br>
+<span style="font-size: 20px; color: #026635;"><b>Betweenness Centrality:</b></span> Betweenness centrality identifies characters that act as bridges or intermediaries between other characters in the network. These characters often control the flow of information or influence within the Breaking Bad universe.<br>
+<span style="font-size: 20px; color: #026635;"><b>Closeness Centrality:</b></span> Closeness centrality measures how quickly a character can reach all other characters in the network. Characters with high closeness centrality are central to the network's communication and interaction dynamics.<br>
+<span style="font-size: 20px; color: #026635;"><b>Eigen Centrality:</b></span>  Eigen centrality evaluates a character's importance based on their connections to other important characters. It takes into account not only a character's direct connections but also the connections of their connections.<br>
+<span style="font-size: 20px; color: #026635;"><b>PageRank:</b></span> PageRank, originally developed by Google, assesses the importance of a character based on the quality and quantity of their connections. Characters with high PageRank are considered influential within the network.
+<br>
+These terminologies served as essential tools in my analysis, enabling me to quantify and understand the roles and relationships of characters within the Breaking Bad universe. Through their application, I gained valuable insights into the dynamics that drive the narrative and shape the interconnected web of characters in the series.
 
                      </p>
-                     <h1>Data Analysis:</h1>
+                     <h1 style="color: #026635;">Data Analysis:</h1>
                      <p>
                         As we delve into the analysis phase of our project, it's crucial to understand the meticulous steps taken to unravel the complex tapestry of character relationships and community dynamics within Breaking Bad.
 
@@ -103,7 +91,7 @@ Through this rigorous analysis, a compelling narrative begins to emerge. While i
 In conclusion, our analysis serves as a testament to the power of computational methodologies in unraveling the mysteries of Breaking Bad. By employing a blend of advanced techniques and meticulous attention to detail, we illuminate the intricate web of character relationships and community formations that define the series, reaffirming its status as a cultural phenomenon that continues to captivate audiences worldwide.
 
                      </p>
-                     <h1>Conclusion:</h1>
+                     <h1 style="color: #026635;">Conclusion:</h1>
                      <p>
                         In conclusion, our exploration of Breaking Bad has illuminated the complexities of character dynamics and community formations within the series. Through meticulous data analysis and computational methodologies, we've gained valuable insights into the central role of characters like Walter White while uncovering the nuanced hierarchy of importance among other key players.
 
