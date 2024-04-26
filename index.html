@@ -8,6 +8,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--
     
 TemplateMo 553 Xtra Blog
@@ -25,6 +26,8 @@ https://templatemo.com/tm-553-xtra-blog
             <div class="tm-site-header">
                 <!-- <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>             -->
                 <h1 class="text-center"> Breaking Bad: A Network Analysis</h1>
+                <a style="color: white;" href="https://github.com/akshat1604/breaking-bad-network-analysis/">Click here to access the code</a>  
+                
             </div>
             
             
@@ -34,7 +37,7 @@ https://templatemo.com/tm-553-xtra-blog
         <main class="tm-main">
               
             <div class="row tm-row">
-                
+               
                <h1 style="color: #026635;">Introduction:</h1>
                   <p>
                      Welcome to the world of Breaking Bad, where chemistry meets disaster and characters clash in an engrossing story of transformation and consequence. With this project, I go deeply into the core of one of the most recognizable television shows ever created, revealing layers upon layers of nuance and complexity beneath the surface. I examine the complex web of character interactions and community dynamics in Breaking Bad through meticulous gathering of data, contextual study, and rigorous analysis. My goal is to solve the riddles of this engrossing story and reveal fresh insights into its enduring appeal, starting with Walter White's modest beginnings and ending with the dramatic culmination of the final season. I set out on an adventure to discover the underlying structures that determine the narrative landscape of the series via the lens of network analysis and computational approaches, providing new perspectives on the lasting impression of this television masterpiece. So grab a seat, fellow fans, and join me as we explore the universe of Breaking Bad, where each person, group, and decision has purpose and weight. Let's investigate Walter White's empire's depths together and learn more about this ground-breaking series' secrets.
@@ -54,15 +57,16 @@ https://templatemo.com/tm-553-xtra-blog
                      </p>
                      <h1 style="color: #026635;">Dataset:</h1>
                      <p>
-                        I wanted data, namely information about Breaking Bad that I could evaluate, to get my analysis off to a good start. Unfortunately, I couldn't find an existing dataset that suited my requirements. I decided to utilize web scraping to obtain the necessary information straight from the Breaking Bad fandom website. I crawled through the website, extracting characters from all the episodes, and season summaries using BeautifulSoup. Although the Breaking Bad website was a treasure trove of information, it was difficult for me to find what I needed by browsing through its pages. 
-                        One of the challenges I encountered was dealing with the final season, which was split into two parts. I made sure to scrape data from both halves to capture the full picture of the series' conclusion. After some HTML parsing and web crawling, I managed to gather a neat dataset containing all the crucial details I needed for my analysis, namely all the character names and the season summaries. In a nutshell, my dataset may not have come from a fancy source, but it's packed with the information I need to delve into the world of Breaking Bad.
+                        I wanted data, namely information about Breaking Bad that I could evaluate, to get my analysis off to a good start. Unfortunately, I couldn't find an existing dataset that suited my requirements. I decided to utilize web scraping to obtain the necessary information straight from the <a href="https://breakingbad.fandom.com/">Breaking Bad Fandom</a> website. I crawled through the website, extracting characters from all the episodes, and season summaries using <a href="https://pypi.org/project/beautifulsoup4/">BeautifulSoup.</a> Although the fandom website is a treasure trove of information, it was difficult for me to find what I needed by browsing through its pages. 
+                        One of the challenges I encountered was dealing with the final season, which was split into two parts. I made sure to scrape data from both halves to capture the full picture of the series' conclusion. After some HTML parsing and web crawling, I managed to gather a neat dataset containing all the crucial details I needed for my analysis, namely, all the character names and the textual season summaries. In a nutshell, my dataset may not have come from a fancy source, but it's packed with the information I need to delve into the world of Breaking Bad.
 
                      </p>
-                     <h1 style="color: #026635;">Techniques and Terminologies:</h1>
+                     <h1 style="color: #026635;">Techniques & Terminologies:</h1>
                      <p>
                         When working on network analysis, I've employed a range of techniques and concepts that may seem daunting at first glance. However, by breaking down these terms into simpler explanations, even those unfamiliar with computer science can grasp their significance:
 <br>
 <span style="font-size: 25px; color: #026635;"><b>Named Entity Recognition (NER):</b></span> <br> Named Entity Recognition is a technique used to identify and classify entities within text data. In the context of Breaking Bad, NER helps us extract specific information such as character names, locations, and organizations mentioned in episode summaries or character descriptions. <br>
+
 <span style="font-size: 25px; color: #026635;"><b>Centrality Measures:</b></span> <br>
 <span style="font-size: 20px; color: #026635;"><b>Network Centrality:</b></span> Network centrality refers to the importance of a node (or character in our case) within a network. It quantifies how central or influential a character is in the overall structure of the Breaking Bad universe.<br>
 <span style="font-size: 20px; color: #026635;"><b>Degree Centrality:</b></span>  Degree centrality measures how well-connected a character is by counting the number of connections (or edges) they have with other characters. A character with high degree centrality is highly connected and may play a significant role in the narrative.<br>
@@ -74,28 +78,53 @@ https://templatemo.com/tm-553-xtra-blog
 These terminologies served as essential tools in my analysis, enabling me to quantify and understand the roles and relationships of characters within the Breaking Bad universe. Through their application, I gained valuable insights into the dynamics that drive the narrative and shape the interconnected web of characters in the series.
 
                      </p>
-                     <h1 style="color: #026635;">Data Analysis:</h1>
+                     <h1 style="color: #026635;">Analysis:</h1>
                      <p>
-                        As we delve into the analysis phase of our project, it's crucial to understand the meticulous steps taken to unravel the complex tapestry of character relationships and community dynamics within Breaking Bad.
+                        In my effort to analyze the intricate narrative threads of Breaking Bad, I utilized data exploration and analysis, leveraging advanced techniques to uncover the underlying dynamics of character relationships within the series. Let's delve into the key methodologies employed and the insights gained through my analysis.
+<br>
+<span style="font-size: 20px; color: #026635;"><b>Named Entity Recognition (NER) and Data Preparation:</b></span>
+My analysis began with the application of Named Entity Recognition (NER) using the Spacy library. By parsing through the text summaries scraped from each season, I identified and extracted entities such as character names, laying the groundwork for our subsequent analysis. Once the entities were identified by NER, I filtered out only the entities which are also in my list of characters in the show. This was done in order to only focus on the relevant information.  
+<br>
+<span style="font-size: 20px; color: #026635;"><b>Relationship Generation using Sliding Window Technique:</b></span>
 
-Our journey commences with the utilization of Named Entity Recognition (NER), a sophisticated technique employed to identify and categorize entities within text data. Leveraging the capabilities of the Spacy library, we meticulously combed through the text summaries of each season, extracting key entities such as character names. This initial step serves as the foundational building block for our subsequent analysis, providing us with a comprehensive list of characters that populate the Breaking Bad universe.
+Imagine we're looking at a sequence of events (in our case, the text summaries) in Breaking Bad, where different characters appear one after the other. To understand how they interact, we use something called a sliding window. A sliding window in this scenario would be the x number of lines in the season summaries. 
+Let's say we're focusing on a group of 5 lines at a time. Now, if we see the same character appearing twice in a row, we skip it. This helps us avoid repeating things we already know. Then, we make a list of all the unique characters we've seen.
 
-With our character list in hand, we embark on the task of generating relationships between them—a process that demands a delicate balance of creativity and computational prowess. Employing the sliding window technique with a window size of 5, we systematically traverse through our entity lists, identifying unique character pairings while meticulously filtering out repeated occurrences within the same context. This meticulous approach ensures the accuracy and reliability of our relationship data, laying the groundwork for the subsequent construction of our network graphs.
+Now, we go through this unique list and look at each pair of characters one after the other. For example, if we see Walter followed by Jesse, we note down that Walter and Jesse have some kind of connection. Then, we move on to the next pair, like Jesse and Walter. We keep doing this until we've looked at all the pairs.
 
-Moving forward, we transition to the construction of network graphs—a visual representation of the intricate web of relationships between characters within each season and across the entire series. These graphs provide us with a comprehensive overview of the interconnectedness between characters, offering valuable insights into the underlying structures that govern the Breaking Bad narrative landscape.
-
-However, our analysis doesn't conclude with the construction of network graphs. Armed with these visualizations, we turn to the powerful NetworkX library to compute centrality measures—a suite of metrics that quantifies the importance of characters within the network. By leveraging techniques such as degree centrality, betweenness centrality, and eigen centrality, we gain deeper insights into the relative significance of characters within the Breaking Bad universe.
-
-Through this rigorous analysis, a compelling narrative begins to emerge. While it comes as no surprise that Walter White occupies a central role within the Breaking Bad narrative, our findings reveal a nuanced hierarchy of character importance, with other key players vying for prominence in the series' complex ecosystem. This nuanced understanding of character dynamics enriches our appreciation of Breaking Bad, offering fresh insights into the timeless allure of this iconic television masterpiece.
-
-In conclusion, our analysis serves as a testament to the power of computational methodologies in unraveling the mysteries of Breaking Bad. By employing a blend of advanced techniques and meticulous attention to detail, we illuminate the intricate web of character relationships and community formations that define the series, reaffirming its status as a cultural phenomenon that continues to captivate audiences worldwide.
-
-                     </p>
-                     <h1 style="color: #026635;">Conclusion:</h1>
+This process helps us understand how characters are linked to each other in the story. It's like connecting the dots between different characters, helping us see who interacts with whom and how often.
+<br>
+<span style="font-size: 20px; color: #026635;"><b>Graph Construction and Centrality Measures:</b></span>
+From the relationships generated, I constructed network graphs for each season and for the series as a whole. Each relationship was assigned a weight based on the frequency of occurrence, capturing the strength of interaction between characters. Utilizing the NetworkX library, we then calculated a range of centrality measures, including Network Centrality, Degree Centrality, Betweenness Centrality, Closeness Centrality, and Eigen Centrality. These measures offered valuable insights into the relative importance of characters within the Breaking Bad universe, illuminating the central figures and their roles.Figure 1 depicts the most important characters in the show. 
+<span >
+<figure>
+   <img src="ImpChar.png" style="margin:auto; width: 80%"></img>
+   <figcaption>Fig.1 - Importance of Characters</figcaption>
+</figure>
+</span>
+</p>
+<p>
+<span style="font-size: 20px; color: #026635; width: 100%;"><b>Community Detection and Character Importance:</b></span>
+By analyzing the network graphs and centrality measures, I identified distinct communities within each season and across the entire series. These communities represent clusters of characters with strong interconnections, highlighting the dynamics of relationships within Breaking Bad. Furthermore, my analysis revealed the leader or most important character within each community, shedding light on the hierarchy of influence and power dynamics at play.
+Figure 2 depicts the communities detected in show.
+<span >
+   <figure>
+      <img src="Comms.png" style="margin:auto; width: 80%"></img>
+      <figcaption>Fig.2 - Communities detected in the show distinguised based on color</figcaption>
+   </figure>
+   </span>
+<br>
+</p>
+<p>
+<span style="font-size: 20px; color: #026635;"><b>Key Findings:</b></span>
+Through this comprehensive analysis, one conclusion became abundantly clear: Walter White reigns supreme as the central figure of Breaking Bad. However, my exploration also unveiled the significant roles played by other characters, each contributing to the richness and complexity of the series. While Walter may occupy the spotlight, characters such as Jesse Pinkman, Hank Schrader, and Gus Fring emerge as pivotal players in the unfolding drama, each leaving an indelible mark on the Breaking Bad universe.
+</p>
+                     <h1 style="color: #026635;width: 100%;">Conclusion:</h1>
                      <p>
-                        In conclusion, our exploration of Breaking Bad has illuminated the complexities of character dynamics and community formations within the series. Through meticulous data analysis and computational methodologies, we've gained valuable insights into the central role of characters like Walter White while uncovering the nuanced hierarchy of importance among other key players.
+                        In conclusion, my exploration of Breaking Bad has illuminated the complexities of character dynamics and community formations within the series. Through meticulous data analysis and computational methodologies, I've gained valuable insights into the central role of characters like Walter White while uncovering the nuanced hierarchy of importance among other key players.
 
-                        As we bid farewell to the Breaking Bad universe, we're reminded of the timeless allure of this iconic series—a testament to the power of storytelling and the enduring impact of complex narratives. Whether you're a seasoned fan or a newcomer to the world of Walter White, we hope our journey has shed new light on the captivating allure of Breaking Bad and left you with a deeper appreciation for its narrative depth and cultural significance.
+                        As we bid farewell to the Breaking Bad universe, we're reminded of the timeless allure of this iconic series—a testament to the power of storytelling and the enduring impact of complex narratives. Whether you're a seasoned fan or a newcomer to the world of Walter White, I hope this project has shed new light on Breaking Bad and left you with a deeper appreciation for its narrative depth and significance.
+                        You can access all graphs for all the seasons <a href="https://github.com/akshat1604/breaking-bad-network-analysis/tree/main/src">here.</a>  
                      </p>
                 </article>
                
